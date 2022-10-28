@@ -1,0 +1,90 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-color: black;
+}
+#icone {
+	cursor: pointer;
+	padding: 1px;
+	position: top;
+	z-index: 1;
+}
+
+#check{
+	display: none;
+}
+
+.barra{
+	background-color: white;
+	height: 100%;
+	width: 300px;
+	position: absolute;
+	left: -300px;
+	transition: all .2s linear;
+}
+
+.barra .link{
+	list-style: none;
+}
+
+nav{
+	width: 100%;
+	position: absolute;
+	top: 60px;
+}
+nav a{
+	text-decoration: none;
+}
+
+.link{
+	color: black;
+	font-family: 'Arial';
+	font-size: 12pt;
+	padding: 20px;
+	border-bottom: 2px solid black;
+	transition:  all .2s linear;
+	opacity: 0;
+	margin-top: 200px;
+}
+.link:hover{
+	background-color: lightgray;
+}
+
+#check:checked ~ .barra nav a .link{
+		opacity: 1;
+		margin-top: 0;
+		transition-delay: .2s;
+}
+#check:checked ~ .barra{
+		transform: translateX(300px);
+}
+thead > tr > th 
+{ position: sticky;
+  top: 0;
+  color: white;
+  background-color: gray; 
+}
+
+body {
+  font-family: system-ui; 
+  background: white;
+  color: black;
+  text-align: center;   
+}
+
+tbody > tr:nth-child(2n){
+  background-color: lightgray;
+}
+td, th{
+  border: 2px solid white;
+  padding: 1rem;  
+}
+table{
+  width: 100%;
+   margin-bottom : .5em;
+   table-layout: fixed;
+  text-align: center;
+  border-collapse: collapse;
+}
